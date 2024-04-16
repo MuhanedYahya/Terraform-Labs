@@ -40,3 +40,12 @@ apt update
 apt install graphviz -y
 terraform graph | dot  -Tpng > graph.png
 ```
+
+##### mutable vs immutable infrastructure
+An infrastructure which is prone to change and hence easily muted, is called mutable, and an infrastructure which is not capable of change, is called immutable.
+
+
+- Data sources allow Terraform to read attributes from resources which are provisioned outside its control.
+
+
+- Count and for_each meta argument simplifies the creation of multiple resource instances without having to repeat the same resource block multiple times
