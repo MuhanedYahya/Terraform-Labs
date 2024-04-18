@@ -25,7 +25,6 @@ terraform state mv aws_instance.web  aws_instance.web2
 - after this if we change the name from the conf no changes will be applied
 
 ###### state rm will remove a resource from the state file
-```
 This command is used when you no longer wish to manage one or more resources via the current Terraform configuration and state.
 
 ```shell
