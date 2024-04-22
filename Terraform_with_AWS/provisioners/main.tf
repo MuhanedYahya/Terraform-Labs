@@ -21,7 +21,10 @@ resource "aws_instance" "webserver" {
   vpc_security_group_ids = [ aws_security_group.ssh-access.id ]
 
 }
-
+resource "aws_key_pair" "web" {
+    key_name = "terraform-keypair"
+    public_key = tls_private_key.rsa_4096.public_key_openssh
+}
 
 resource "tls_private_key" "rsa_4096" {
     algorithm = "RSA"
